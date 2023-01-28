@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+@model UpdateSettingVM
+<div class="content-wrapper">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Update setting</h4>
+                <form class="forms-sample" method="post">
+                    <div class="form-group">
+                        <label asp-for="Value">@Model.Key</label>
+                        <input asp-for="Value" class="form-control" placeholder="Value">
+                        <span asp-validation-for="Value" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <a asp-action="Index" asp-controller="Setting" class="btn btn-light">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
